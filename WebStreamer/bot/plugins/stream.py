@@ -12,11 +12,11 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 
 
-
 @StreamBot.on_message(
     filters.private
     & (
-        filters.document
+        filters.photo
+        | filters.document
         | filters.video
     ),
     group=4,
